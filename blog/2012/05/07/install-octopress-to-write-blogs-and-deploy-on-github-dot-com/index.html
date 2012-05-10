@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Liangwenke's' Blog</title>
+  <title>用octopress来写博客并发布到Github上 - Liangwenke's' Blog</title>
   <meta name="author" content="Liangwenke">
 
   
-  <meta name="description" content="一个树状分类表例子: 查找某个分类的所有子类 select * from categories start with id=100 connect by prior id=parent_id 查找某个分类的所有父类 select * from categories start with id= &hellip;">
+  <meta name="description" content="转载自 http://wongyouth.github.com/blog/2012/04/21/install-octopress-to-write-blogs-and-deploy-on-github-dot-com/
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://liangwenke.github.com">
+  <link rel="canonical" href="http://liangwenke.github.com/blog/2012/05/07/install-octopress-to-write-blogs-and-deploy-on-github-dot-com">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -62,67 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/05/10/oracle-start-with-connect-by-prior/">Oracle Start With &#8230; Connect by Prior用法</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-10T15:21:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>一个树状分类表例子:</h3>
-
-
-<p>查找某个分类的所有子类</p>
-
-
-<p>select * from categories start with id=100 connect by prior id=parent_id</p>
-
-<p>查找某个分类的所有父类</p>
-
-
-<p>select * from categories start with id=100 connect by prior parent_id=id</p>
-
-<p>PS: 查找按分组条件下的第一条记录,可用max, min函数,如查找出所有订单的第一条明细记录</p>
-
-
-<p>select item_lines a where a.id in (select min(id) from item_lines b where a.order_id=b.order_id)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/07/install-octopress-to-write-blogs-and-deploy-on-github-dot-com/">用octopress来写博客并发布到Github上</a></h1>
+      <h1 class="entry-title">用octopress来写博客并发布到Github上</h1>
     
     
       <p class="meta">
@@ -145,20 +91,55 @@
   </header>
 
 
-  <div class="entry-content"><p>转载自 http://wongyouth.github.com/blog/2012/04/21/install-octopress-to-write-blogs-and-deploy-on-github-dot-com/</p>
+<div class="entry-content"><p>转载自 http://wongyouth.github.com/blog/2012/04/21/install-octopress-to-write-blogs-and-deploy-on-github-dot-com/</p>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Liangwenke</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2012-05-07T23:36:00+08:00" pubdate data-updated="true">May 7<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://liangwenke.github.com/blog/2012/05/07/install-octopress-to-write-blogs-and-deploy-on-github-dot-com/" data-via="liangwenke" data-counturl="http://liangwenke.github.com/blog/2012/05/07/install-octopress-to-write-blogs-and-deploy-on-github-dot-com/" >Tweet</a>
+  
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/05/10/oracle-start-with-connect-by-prior/" title="Next Post: oracle start with ... connect by prior用法">oracle start with ... connect by prior用法 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -166,7 +147,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/05/10/oracle-start-with-connect-by-prior/">oracle start with &#8230; connect by prior用法</a>
+        <a href="/blog/2012/05/10/oracle-start-with-connect-by-prior/">oracle start with ... connect by prior用法</a>
       </li>
     
       <li class="post">
@@ -179,7 +160,7 @@
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/liangwenke">@liangwenke</a> on GitHub
@@ -209,7 +190,7 @@
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -228,6 +209,7 @@
 
   
 </aside>
+
 
     </div>
   </div>

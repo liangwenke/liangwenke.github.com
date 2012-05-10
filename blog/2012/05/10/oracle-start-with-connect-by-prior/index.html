@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>first post - Liangwenke's' Blog</title>
+  <title>oracle start with ... connect by prior用法 - Liangwenke's' Blog</title>
   <meta name="author" content="Liangwenke">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="一个树状分类表例子: 查找某个分类的所有子类 select * from categories start with id=100 connect by prior id=parent_id 查找某个分类的所有父类 select * from categories start with id= &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://liangwenke.github.com/blog/2012/05/07/first-post">
+  <link rel="canonical" href="http://liangwenke.github.com/blog/2012/05/10/oracle-start-with-connect-by-prior">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">First Post</h1>
+      <h1 class="entry-title">Oracle Start With ... Connect by Prior用法</h1>
     
     
       <p class="meta">
@@ -84,14 +83,30 @@
   
 
 
-<time datetime="2012-05-07T23:36:00+08:00" pubdate data-updated="true">May 7<span>th</span>, 2012</time>
+<time datetime="2012-05-10T15:21:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><h3>一个树状分类表例子:</h3>
+
+
+<p>查找某个分类的所有子类</p>
+
+
+<p>select * from categories start with id=100 connect by prior id=parent_id</p>
+
+<p>查找某个分类的所有父类</p>
+
+
+<p>select * from categories start with id=100 connect by prior parent_id=id</p>
+
+<p>PS: 查找按分组条件下的第一条记录,可用max, min函数,如查找出所有订单的第一条明细记录</p>
+
+
+<p>select item_lines a where a.id in (select min(id) from item_lines b where a.order_id=b.order_id)</p>
 </div>
 
 
@@ -114,7 +129,7 @@
   
 
 
-<time datetime="2012-05-07T23:36:00+08:00" pubdate data-updated="true">May 7<span>th</span>, 2012</time>
+<time datetime="2012-05-10T15:21:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2012</time>
       
 
 
@@ -122,7 +137,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://liangwenke.github.com/blog/2012/05/07/first-post/" data-via="liangwenke" data-counturl="http://liangwenke.github.com/blog/2012/05/07/first-post/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://liangwenke.github.com/blog/2012/05/10/oracle-start-with-connect-by-prior/" data-via="liangwenke" data-counturl="http://liangwenke.github.com/blog/2012/05/10/oracle-start-with-connect-by-prior/" >Tweet</a>
   
   
   
@@ -130,6 +145,8 @@
 
     
     <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/05/07/install-octopress-to-write-blogs-and-deploy-on-github-dot-com/" title="Previous Post: 用octopress来写博客并发布到Github上">&laquo; 用octopress来写博客并发布到Github上</a>
       
       
     </p>
@@ -145,7 +162,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/05/07/first-post/">first post</a>
+        <a href="/blog/2012/05/10/oracle-start-with-connect-by-prior/">oracle start with ... connect by prior用法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/07/install-octopress-to-write-blogs-and-deploy-on-github-dot-com/">用octopress来写博客并发布到Github上</a>
       </li>
     
   </ul>

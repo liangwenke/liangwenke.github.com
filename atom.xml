@@ -4,7 +4,7 @@
   <title><![CDATA[Liangwenke's' Blog]]></title>
   <link href="http://liangwenke.github.com/atom.xml" rel="self"/>
   <link href="http://liangwenke.github.com/"/>
-  <updated>2012-05-07T23:46:37+08:00</updated>
+  <updated>2012-05-10T15:39:20+08:00</updated>
   <id>http://liangwenke.github.com/</id>
   <author>
     <name><![CDATA[Liangwenke]]></name>
@@ -14,11 +14,36 @@
 
   
   <entry>
-    <title type="html"><![CDATA[first post]]></title>
-    <link href="http://liangwenke.github.com/blog/2012/05/07/first-post/"/>
+    <title type="html"><![CDATA[oracle start with ... connect by prior用法]]></title>
+    <link href="http://liangwenke.github.com/blog/2012/05/10/oracle-start-with-connect-by-prior/"/>
+    <updated>2012-05-10T15:21:00+08:00</updated>
+    <id>http://liangwenke.github.com/blog/2012/05/10/oracle-start-with-connect-by-prior</id>
+    <content type="html"><![CDATA[<h3>一个树状分类表例子:</h3>
+
+
+<p>查找某个分类的所有子类</p>
+
+
+<p>select * from categories start with id=100 connect by prior id=parent_id</p>
+
+<p>查找某个分类的所有父类</p>
+
+
+<p>select * from categories start with id=100 connect by prior parent_id=id</p>
+
+<p>PS: 查找按分组条件下的第一条记录,可用max, min函数,如查找出所有订单的第一条明细记录</p>
+
+
+<p>select item_lines a where a.id in (select min(id) from item_lines b where a.order_id=b.order_id)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[用octopress来写博客并发布到Github上]]></title>
+    <link href="http://liangwenke.github.com/blog/2012/05/07/install-octopress-to-write-blogs-and-deploy-on-github-dot-com/"/>
     <updated>2012-05-07T23:36:00+08:00</updated>
-    <id>http://liangwenke.github.com/blog/2012/05/07/first-post</id>
-    <content type="html"><![CDATA[
+    <id>http://liangwenke.github.com/blog/2012/05/07/install-octopress-to-write-blogs-and-deploy-on-github-dot-com</id>
+    <content type="html"><![CDATA[<p>转载自 http://wongyouth.github.com/blog/2012/04/21/install-octopress-to-write-blogs-and-deploy-on-github-dot-com/</p>
 ]]></content>
   </entry>
   
